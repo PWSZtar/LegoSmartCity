@@ -151,17 +151,6 @@ ApplicationWindow {
 //            button10.checked: data5 & (1 <<  4)
 //            button11.checked: data5 & (1 <<  6)
 
-//            button1.onClicked:  appcore.onSwitch(5,  8, button1.checked)
-//            button2.onClicked:  appcore.onSwitch(5, 14, button2.checked)
-//            button3.onClicked:  appcore.onSwitch(5, 12, button3.checked)
-//            button4.onClicked:  appcore.onSwitch(5, 13, button4.checked)
-//            button5.onClicked:  appcore.onSwitch(5,  9, button5.checked)
-//            button6.onClicked:  appcore.onSwitch(5, 10, button6.checked)
-//            button7.onClicked:  appcore.onSwitch(5,  0, button7.checked)
-//            button8.onClicked:  appcore.onSwitch(5,  1, button8.checked)
-//            button9.onClicked:  appcore.onSwitch(5,  2, button9.checked)
-//            button10.onClicked: appcore.onSwitch(5,  4, button10.checked)
-//            button11.onClicked: appcore.onSwitch(5,  6, button11.checked)
         }
 
         PetshopPage
@@ -394,7 +383,7 @@ ApplicationWindow {
             data4 = appcore.getValue(4)
 
             data5 = appcore.getValue(5)
-            for(var i=0 ; i<6 ; i++) {
+            for(var i=0 ; i<7 ; i++) {
                 workshopPage.sceneZeroFloor.lightSwitch(i, data5 & (1 << workshopPage.bitsZeroFloor[i]))
             }
             workshopPage.sceneFirstFloor.lightSwitch(0, data5 & (1 << workshopPage.bitsFirstFloor[0]))
