@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>SquarePage.qml</file>
+        <file>RestaurantPage.qml</file>
+        <file>CinemaPage.qml</file>
+        <file>WorkshopPage.qml</file>
+        <file>PetshopPage.qml</file>
+        <file>DetectiveOfficePage.qml</file>
+        <file>BistroPage.qml</file>
+        <file>HousePage.qml</file>
+        <file>CafeteriaPage.qml</file>
+        <file>images/2.png</file>
+        <file>images/3.png</file>
+        <file>images/13.png</file>
+        <file>images/12.png</file>
+        <file>images/11.png</file>
+        <file>images/10.png</file>
+        <file>images/9.png</file>
+        <file>images/8.png</file>
+        <file>images/7.png</file>
+        <file>images/6.png</file>
+        <file>images/5.png</file>
+        <file>images/4.png</file>
+        <file>Station1Page.qml</file>
+        <file>Station2Page.qml</file>
+        <file>RollercoasterPage.qml</file>
+        <file>CityPage.qml</file>
+        <file>images/ki.jpg</file>
+        <file>images/bank/first_floor.png</file>
+        <file>images/bank/second_floor.png</file>
+        <file>images/bulbs/bulbOff.png</file>
+        <file>images/bulbs/bulbOn.png</file>
+        <file>BankPage.qml</file>
+        <file>BankSceneZeroFloor.qml</file>
+        <file>BankSceneFirstFloor.qml</file>
+        <file>WorkshopSceneFirstFloor.qml</file>
+        <file>WorkshopSceneZeroFloor.qml</file>
+        <file>images/corner_garage/CornerGarage0.png</file>
+        <file>images/corner_garage/CornerGarage1.png</file>
+        <file>WorkshopSceneThirdFloor.qml</file>
+        <file>images/corner_garage/CornerGarage3.png</file>
+        <file>images/corner_garage/CornerGarage2.png</file>
+        <file>WorkshopSceneSecondFloorB.qml</file>
+    </qresource>
+</RCC>
