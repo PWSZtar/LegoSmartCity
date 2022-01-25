@@ -135,10 +135,10 @@ ApplicationWindow {
         WorkshopPage
         {
             id: workshopPage
-            sceneZeroFloor.onBulbswitchChanged: appcore.onSwitch(0,  bitsZeroFloor[sceneZeroFloor.currentIndex], sceneZeroFloor.bulbState(sceneZeroFloor.currentIndex))
-            sceneFirstFloor.onBulbswitchChanged: appcore.onSwitch(0,  bitsFirstFloor[sceneFirstFloor.currentIndex], sceneFirstFloor.bulbState(sceneFirstFloor.currentIndex))
-            sceneSecondFloorB.onBulbswitchChanged: appcore.onSwitch(0,  bitsFirstFloor[sceneFirstFloor.currentIndex], sceneFirstFloor.bulbState(sceneFirstFloor.currentIndex))
-            sceneThridFloor.onBulbswitchChanged: appcore.onSwitch(0,  bitsFirstFloor[sceneFirstFloor.currentIndex], sceneFirstFloor.bulbState(sceneFirstFloor.currentIndex))
+            sceneZeroFloor.onBulbswitchChanged: appcore.onSwitch(5,  bitsZeroFloor[sceneZeroFloor.currentIndex], sceneZeroFloor.bulbState(sceneZeroFloor.currentIndex))
+            sceneFirstFloor.onBulbswitchChanged: appcore.onSwitch(5,  bitsFirstFloor[sceneFirstFloor.currentIndex], sceneFirstFloor.bulbState(sceneFirstFloor.currentIndex))
+            sceneSecondFloor.onBulbswitchChanged: appcore.onSwitch(5,  bitsSecondFloor[sceneSecondFloor.currentIndex], sceneSecondFloor.bulbState(sceneSecondFloor.currentIndex))
+            sceneThirdFloor.onBulbswitchChanged: appcore.onSwitch(5,  bitsThirdFloor[sceneThirdFloor.currentIndex], sceneThirdFloor.bulbState(sceneThirdFloor.currentIndex))
 //            button1.checked:  data5 & (1 <<  8)
 //            button2.checked:  data5 & (1 << 14)
 //            button3.checked:  data5 & (1 << 12)
@@ -150,7 +150,6 @@ ApplicationWindow {
 //            button9.checked:  data5 & (1 <<  2)
 //            button10.checked: data5 & (1 <<  4)
 //            button11.checked: data5 & (1 <<  6)
-
         }
 
         PetshopPage
@@ -383,14 +382,14 @@ ApplicationWindow {
             data4 = appcore.getValue(4)
 
             data5 = appcore.getValue(5)
-            for(var i=0 ; i<7 ; i++) {
-                workshopPage.sceneZeroFloor.lightSwitch(i, data5 & (1 << workshopPage.bitsZeroFloor[i]))
+            for(var j=0 ; j<7 ; j++) {
+                workshopPage.sceneZeroFloor.lightSwitch(j, data5 & (1 << workshopPage.bitsZeroFloor[j]))
             }
             workshopPage.sceneFirstFloor.lightSwitch(0, data5 & (1 << workshopPage.bitsFirstFloor[0]))
             workshopPage.sceneFirstFloor.lightSwitch(1, data5 & (1 << workshopPage.bitsFirstFloor[1]))
-            workshopPage.sceneSecondFloorB.lightSwitch(0, data5 & (1 << workshopPage.bitsSecondFloor[0]))
-            workshopPage.sceneSecondFloorB.lightSwitch(1, data5 & (1 << workshopPage.bitsSecondFloor[1]))
-            workshopPage.sceneThridFloor.lightSwitch(0, data5 & (1 << workshopPage.bitsThridFloor[0]))
+            workshopPage.sceneSecondFloor.lightSwitch(0, data5 & (1 << workshopPage.bitsSecondFloor[0]))
+            workshopPage.sceneSecondFloor.lightSwitch(1, data5 & (1 << workshopPage.bitsSecondFloor[1]))
+            workshopPage.sceneThirdFloor.lightSwitch(0, data5 & (1 << workshopPage.bitsThirdFloor[0]))
 
             data6 = appcore.getValue(6)
             data7 = appcore.getValue(7)

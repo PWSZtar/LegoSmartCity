@@ -8,13 +8,13 @@ Page {
 
     property alias sceneZeroFloor: sceneZeroFloor
     property alias sceneFirstFloor: sceneFirstFloor
-    property alias sceneSecondFloorB: sceneZeroFloor
-    property alias sceneThridFloor: sceneFirstFloor
+    property alias sceneSecondFloor: sceneSecondFloor
+    property alias sceneThirdFloor: sceneThirdFloor
 
     property var bitsZeroFloor: [8, 8, 14, 12, 13, 1, 2] // L1, L2, L3, L4, L8, L9
     property var bitsFirstFloor: [10, 4]    // L6, L10
     property var bitsSecondFloor: [0, 6] // L7, L11
-    property var bitsThridFloor: [9]   // L5
+    property var bitsThirdFloor: [9]   // L5
 
     header: Label {
         text: qsTr("Warsztat")
@@ -37,6 +37,7 @@ Page {
             anchors.fill: parent
             orientation: Qt.Vertical
             currentIndex: 1
+            spacing: 70
 
             Item {
                 id: thirdFloorItem
@@ -50,7 +51,7 @@ Page {
             Item {
                 id: secondFloorItemB
                 WorkshopSceneSecondFloorB{
-                    id: sceneSecondFloorB
+                    id: sceneSecondFloor
                     anchors.centerIn: parent
                     scale: framePicture.width/3500
                 }
