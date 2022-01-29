@@ -231,13 +231,16 @@ ApplicationWindow {
         {
             id: housePage
 
-            button1.checked:  data9 & (1 << 2)
-            button2.checked:  data9 & (1 << 1)
-            button3.checked:  data9 & (1 << 0)
+            sceneZeroFloor.onBulbswitchChanged: appcore.onSwitch(9,  bitsZeroFloor[sceneZeroFloor.currentIndex], sceneZeroFloor.bulbState(sceneZeroFloor.currentIndex))
 
-            button1.onClicked:  appcore.onSwitch(9, 2, button1.checked)
-            button2.onClicked:  appcore.onSwitch(9, 1, button2.checked)
-            button3.onClicked:  appcore.onSwitch(9, 0, button3.checked)
+
+//            button1.checked:  data9 & (1 << 2)
+//            button2.checked:  data9 & (1 << 1)
+//            button3.checked:  data9 & (1 << 0)
+
+//            button1.onClicked:  appcore.onSwitch(9, 2, button1.checked)
+//            button2.onClicked:  appcore.onSwitch(9, 1, button2.checked)
+//            button3.onClicked:  appcore.onSwitch(9, 0, button3.checked)
         }
 
         CafeteriaPage
@@ -395,6 +398,9 @@ ApplicationWindow {
             data7 = appcore.getValue(7)
             data8 = appcore.getValue(8)
             data9 = appcore.getValue(9)
+            for(var k=0 ; k<3 ; k++) {
+                housePage.sceneZeroFloor.lightSwitch(k, data9 & (1 << housePage.bitsZeroFloor[k]))
+            }
             data10 = appcore.getValue(10)
             data11 = appcore.getValue(11)
         }

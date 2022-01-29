@@ -43,5 +43,7 @@
         <file>images/corner_garage/CornerGarage3.png</file>
         <file>images/corner_garage/CornerGarage2.png</file>
         <file>WorkshopSceneSecondFloorB.qml</file>
+        <file>images/house.png</file>
+        <file>HouseSceneZerotFloor.qml</file>
     </qresource>
 </RCC>

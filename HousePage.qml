@@ -5,9 +5,9 @@ Page {
     id: page
     width: 800
     height: 600
-    property alias button3: button3
-    property alias button2: button2
-    property alias button1: button1
+
+    property alias sceneZeroFloor: sceneZeroFloor
+    property var bitsZeroFloor: [0, 1, 2]
 
     header: Label {
         text: qsTr("Dom")
@@ -15,60 +15,46 @@ Page {
         padding: 10
     }
 
-    Image {
-        id: image
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.bottom: frame1.top
+//    Image {
+//        id: image
+//        anchors.left: parent.left
+//        anchors.right: parent.right
+//        anchors.top: parent.top
+//        anchors.bottom: frame1.top
 
-        source: "images/9.png"
-        anchors.leftMargin: 20
-        anchors.rightMargin: 20
-        anchors.bottomMargin: 20
-        anchors.topMargin: 0
-        autoTransform: false
-        fillMode: Image.PreserveAspectFit
-    }
+//        source: "images/house.png"
+//        anchors.leftMargin: 20
+//        anchors.rightMargin: 20
+//        anchors.bottomMargin: 20
+//        anchors.topMargin: 0
+//        autoTransform: false
+//        fillMode: Image.PreserveAspectFit
+//    }
 
     Frame {
-        id: frame1
-        y: 470
-        height: 60
+        id: framePicture
         anchors.left: parent.left
+        anchors.leftMargin: 10
         anchors.right: parent.right
+        anchors.rightMargin: 10
+        anchors.top: parent.top
         anchors.bottom: parent.bottom
-        anchors.rightMargin: 20
         anchors.bottomMargin: 20
-        anchors.leftMargin: 20
 
-        Row {
-            id: row
+        SwipeView {
+            id: floors_swipeview
             anchors.fill: parent
-            spacing: 5
+            orientation: Qt.Vertical
+            currentIndex: 1
 
-            Button {
-                id: button1
-                width: 100
-                height: 40
-                text: qsTr("L1")
-                checkable: true
-            }
+            Item {
+                id: zeroFloorItem
 
-            Button {
-                id: button2
-                width: 100
-                height: 40
-                text: qsTr("L2")
-                checkable: true
-            }
-
-            Button {
-                id: button3
-                width: 100
-                height: 40
-                text: qsTr("L3")
-                checkable: true
+                HouseSceneZerotFloor{
+                    id: sceneZeroFloor
+                    anchors.centerIn: parent
+                    scale: framePicture.width/1000
+                }
             }
         }
     }
